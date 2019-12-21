@@ -27,4 +27,10 @@ update tb_caleg set name="Is Bos", id_partai=2, earned_vote=70 where name="Sera"
 
 delete from tb_caleg where name="Astina";
 
-select * from tb_caleg inner join tb_partai using(id_partai);
+create view calegPartai as
+(select tb_caleg.id, tb_caleg.name, tb_partai.name as partai, tb_caleg.earned_vote
+from tb_caleg
+inner join tb_partai on (tb_caleg.id_partai) = (tb_partai.id));
+
+select * from calegPartai;
+select * from calegPartai where name="Kabur";
