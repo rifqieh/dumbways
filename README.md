@@ -1,4 +1,4 @@
-# dumbways
+# dumbways batch 1
 
 # No. 1
 Jalankan file no_1.html pada browser yang dimiliki.
